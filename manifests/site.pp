@@ -1,4 +1,4 @@
-node 'puppet*' {
+node /puppet*/ {
   include puppetdb
   include puppetdb::master::config
   class { 'r10k':
