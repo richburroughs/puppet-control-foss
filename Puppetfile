@@ -1,0 +1,18 @@
+forge 'http://forge.puppetlabs.com'
+
+# Modules discovered by generate-puppetfile
+mod 'croddy/make', '0.0.5'
+mod 'gentoo/portage', '2.3.0'
+mod 'puppetlabs/apt', '2.2.2'
+mod 'puppetlabs/concat', '2.1.0'
+mod 'puppetlabs/firewall', '1.8.0'
+mod 'puppetlabs/gcc', '0.3.0'
+mod 'puppetlabs/git', '0.4.0'
+mod 'puppetlabs/inifile', '1.5.0'
+mod 'puppetlabs/pe_gem', '0.2.0'
+mod 'puppetlabs/postgresql', '4.7.1'
+mod 'puppetlabs/puppetdb', '5.1.2'
+mod 'puppetlabs/ruby', '0.4.0'
+mod 'puppetlabs/stdlib', '4.12.0'
+mod 'puppetlabs/vcsrepo', '1.3.2'
+mod 'zack/r10k', '3.2.0'
