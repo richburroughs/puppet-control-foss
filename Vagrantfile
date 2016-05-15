@@ -9,6 +9,7 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "puppetlabs/centos-7.2-64-nocm"
+  config.vm.hostname = "puppet.example.com"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "4096"
