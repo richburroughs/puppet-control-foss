@@ -1,40 +1,26 @@
 # puppet-control-foss
-Control repo for setting up a FOSS Puppet 4 master with PuppetDB.
+Control repo for setting up a FOSS Puppet 4 master with PuppetDB on RedHat or
+CentOS 7.
 
-In manifests/site.pp there is a node definition for the Puppet master. Your node's hostname
-should match that regex.
+There's a Vagrantfile included. If you'd like to provision a Puppet master
+with Vagrant, run:
 
-To bootstrap on CentOS 7:
-
-Install PC1 Yum repo
 ```
-sudo rpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+vagrant up
 ```
 
-Install Puppet agent
+If you'd like to use this repo on another VM or cloud provider do:
+
 ```
-sudo yum install -y puppet-agent
+git clone https://github.com/richburroughs/puppet-control-foss
+cd puppet-control-foss
+./bootstrap/agent.sh
+./bootstrap/master.sh
 ```
 
-Install puppetserver on master node. Set memory in /etc/sysconfig/puppetserver if needed (default is 2G)
-```
-sudo yum install -y puppetserver
-sudo systemctl start puppetserver
-sudo systemctl enable puppetserver
-```
-
-Setup and run r10k
-```
-sudo puppet module install zack-r10k
-sudo puppet apply -e "class { 'r10k': remote => 'https://github.com/richburroughs/puppet-control-foss' }"
-sudo r10k deploy environment -pv
-```
-
-Run Puppet agent on master
-```
-sudo puppet agent -t
-```
 To Do:
 
-Automate bootstrapping
+Add agent nodes to Vagrantfile
+DNS or hosts
+Improve bootstrapping
 Change to roles/profiles for classification
