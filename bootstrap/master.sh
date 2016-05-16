@@ -2,6 +2,8 @@
 
 PATH="/opt/puppetlabs/bin:$PATH"
 
+yum update -y
+yum install -y git
 yum install -y puppetserver
 systemctl start puppetserver
 systemctl enable puppetserver
