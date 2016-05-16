@@ -15,5 +15,6 @@ Vagrant.configure(2) do |config|
     vb.memory = "4096"
   end
   
+  config.vm.provision "shell", path: "bootstrap/agent.sh"
   config.vm.provision "shell", path: "bootstrap/master.sh"
 end
