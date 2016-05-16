@@ -20,7 +20,9 @@ cd puppet-control-foss
 
 To Do:
 
+```
 Add agent nodes to Vagrantfile
 DNS or hosts
 Improve bootstrapping
 Change to roles/profiles for classification
+```
