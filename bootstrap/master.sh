@@ -14,3 +14,5 @@ puppet apply -e "class { 'r10k': remote => 'https://github.com/richburroughs/pup
 r10k deploy environment production -pv
 
 puppet agent -t
+
+puppet resource package puppet-client-tools ensure=latest
